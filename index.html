@@ -61,7 +61,10 @@
         <section id="hero">
             <div class="hero_content">
                 <h1 class="hero_content--title">Mi nombre</h1>
-                <p class=" hero_content--para">Duis ac purus neque. Donec gravida cursus felis, nec faucibus ipsum mollis congue. Praesent placerat elementum nulla, ac tempor ipsum luctus et. Cras varius fermentum augue, sed tristique massa blandit vitae. Quisque tortor lectus, faucibus eu posuere in, malesuada id turpis. Suspendisse auctor molestie porttitor. Proin aliquet in ipsum nec tincidunt. </p>
+                <p class=" hero_content--para">Duis ac purus neque. Donec gravida cursus felis, nec faucibus ipsum
+                    mollis congue. Praesent placerat elementum nulla, ac tempor ipsum luctus et. Cras varius fermentum
+                    augue, sed tristique massa blandit vitae. Quisque tortor lectus, faucibus eu posuere in, malesuada
+                    id turpis. Suspendisse auctor molestie porttitor. Proin aliquet in ipsum nec tincidunt. </p>
                 <a href="#">My work</a>
             </div>
         </section>
@@ -192,31 +195,31 @@
         <section id="habilidades">
             <h1>Habilidades</h1>
             <div class="habilidades">
-            <div class="skills" id="skill1">
-                <h2>Skill1</h2>
-                <div class="skills__design--progress">
-                    <span class="skills__design--progress__1"></span>
+                <div class="skills" id="skill1">
+                    <h2>Skill1</h2>
+                    <div class="skills__design--progress">
+                        <span class="skills__design--progress__1"></span>
+                    </div>
+                </div>
+                <div class="skills" id="skill2">
+                    <h2>Skill1</h2>
+                    <div class="skills__design--progress">
+                        <span class="skills__design--progress__1"></span>
+                    </div>
+                </div>
+                <div class="skills" id="skill3">
+                    <h2>Skill1</h2>
+                    <div class="skills__design--progress">
+                        <span class="skills__design--progress__1"></span>
+                    </div>
+                </div>
+                <div class="skills" id="skill4">
+                    <h2>Skill1</h2>
+                    <div class="skills__design--progress">
+                        <span class="skills__design--progress__1"></span>
+                    </div>
                 </div>
             </div>
-            <div class="skills" id="skill2">
-                <h2>Skill1</h2>
-                <div class="skills__design--progress">
-                    <span class="skills__design--progress__1"></span>
-                </div>
-            </div>
-            <div class="skills" id="skill3">
-                <h2>Skill1</h2>
-                <div class="skills__design--progress">
-                    <span class="skills__design--progress__1"></span>
-                </div>
-            </div>
-            <div class="skills" id="skill4">
-                <h2>Skill1</h2>
-                <div class="skills__design--progress">
-                    <span class="skills__design--progress__1"></span>
-                </div>
-            </div>
-        </div>
         </section>
         <section id="testimonios">
             <h1>Testimonios</h1>
@@ -265,16 +268,21 @@
             <form action="index.html" method="post">
                 <fieldset>
                     <legend>Mándame un mensaje:</legend>
-                    <label for="email">Correo electrónico: </label>
-                    <input type="email" name="email" id="email" required>
-                    <br>
-                    <label for="asunto">Asunto: </label>
-                    <input type="text" name="asunto" id="asunto">
-                    <br>
-                    <label for="mensaje">Mensaje: </label>
-                    <input type="text" name="mensaje" id="mensaje" required>
-                    <br>
-                    <input type="submit" value="Enviar">
+                    <div id="labels">
+                        <label for="email">Correo electrónico: </label>
+                        <label for="asunto">Asunto: </label>
+
+                        <label for="mensaje">Mensaje: </label>
+                    </div>
+                    <div>
+                        <input type="email" name="email" id="email" required>
+                        <br>
+                        <input type="text" name="asunto" id="asunto">
+                        <br>
+                        <textarea rows='4' cols='1' name="mensaje" id="mensaje" required></textarea>
+                        <br>
+                        <input type="submit" value="Enviar" id="submit">
+                    </div>
                 </fieldset>
             </form>
         </section>

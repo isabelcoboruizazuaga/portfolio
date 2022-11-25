@@ -7,22 +7,24 @@
     line-height: 1.8;
 
 }
+
 :root {
-    font-size:65.5%; /*10px*/
+    font-size: 65.5%;
+    /*10px*/
     font-family: 'Changa', sans-serif;
     color: white;
 
-    --primary-color:#232426;
-    --secondary-color:#1BA1BF;
-    --blue-green:#14A697;
-    --violet:#595378;
-    --pink:#aa3659;
+    --primary-color: #232426;
+    --secondary-color: #1BA1BF;
+    --blue-green: #14A697;
+    --violet: #595378;
+    --pink: #aa3659;
 
-    --primary-transparency:rgb(35, 36, 38,0.9);
-    --secondary-transparency:rgba(27, 161, 191, 0.9);
-    --violet-transparency:rgb(89, 83, 120,0.9);
-    --blue-green-transparency: rgb(20, 166, 151,0.9);
-    --pink-transparency:rgb(170, 54, 89,0.9);
+    --primary-transparency: rgb(35, 36, 38, 0.9);
+    --secondary-transparency: rgba(27, 161, 191, 0.9);
+    --violet-transparency: rgb(89, 83, 120, 0.9);
+    --blue-green-transparency: rgb(20, 166, 151, 0.9);
+    --pink-transparency: rgb(170, 54, 89, 0.9);
     /*var(--secondary-color),var(--violet),var(--blue-green)
     #0FBF8D
     #0BD979
@@ -31,49 +33,52 @@
 
 }
 
-h1,ul{
+h1,
+ul {
     font-family: 'Pacifico', cursive;
 }
 
-h1{    
+h1 {
     width: fit-content;
     padding: 0.5rem;
     border-radius: 5px;
 
-    font-size: 400%; /*40px*/
+    font-size: 400%;
+    /*40px*/
 
     background-color: var(--secondary-transparency);
 }
 
-section#hero  h1{
+section#hero h1 {
     background-color: transparent;
 }
 
 a {
     text-decoration: none;
     color: white;
-  }
+}
 
 /*------------ESTRUCTURA DEL MAIN Y ASIDE------------*/
-body{
+body {
     margin: 0;
     width: 100%;
     overflow-x: hidden;
-    
+
     display: flex;
 }
-aside{
+
+aside {
     /*Porcentaje de pantalla que ocupará*/
     flex-basis: 3%;
 }
 
-main{
+main {
     /*Porcentaje de pantalla que ocupará*/
     width: 100%;
     flex-basis: 97%;
-    
+
     /*Imagen de fondo*/
-    background-image:url("images/background.jpg") ;
+    background-image: url("images/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -83,51 +88,54 @@ main{
     flex-direction: column;
 }
 
-header{
+header {
     padding: 0%;
     margin: 0;
     width: 100%;
-    
+
     display: flex;
 }
 
 
 /*------------BARRA DE NAVEGACIÓN------------*/
-nav{
+nav {
     margin-top: 0;
-    width: 100%; 
+    width: 100%;
     background-color: var(--primary-color);
-    }
-nav ul{
-    list-style:none;
-    font-size: 300%; /*30px*/
+}
+
+nav ul {
+    list-style: none;
+    font-size: 300%;
+    /*30px*/
 
     /*Posición de los elementos*/
     display: flex;
-    justify-content:space-evenly
+    justify-content: space-evenly
 }
-nav ul li{
+
+nav ul li {
     width: fit-content;
     height: fit-content;
     margin: 0.5rem;
 }
-nav ul li a{    
+
+nav ul li a {
     color: white;
 }
 
 
 
 /*------------ASIDE------------*/
-aside{   
+aside {
     height: 100vh;
     background-image: linear-gradient(var(--blue-green), var(--violet));
-    
 
     /*Para que se quede fijo en la página*/
-    position: -webkit-sticky;
     position: sticky;
-    top: 0;  
-    
+    top: 0;
+    left: 0;
+
     /*Disposición de los elementos*/
     display: flex;
     flex-direction: column;
@@ -144,7 +152,7 @@ aside{
 
 
 /*------------SECCIONES------------*/
-section{
+section {
     margin-left: 1rem;
 }
 
@@ -156,7 +164,7 @@ section#hero {
     margin-left: 2rem;
 
     height: 70vh;
-    height:fit-content;
+    height: fit-content;
     width: 40vh;
 
     display: flex;
@@ -165,10 +173,10 @@ section#hero {
 }
 
 div.hero_content {
-    background-image: linear-gradient(135deg,var(--secondary-transparency),var(--violet-transparency),var(--blue-green-transparency));
+    background-image: linear-gradient(135deg, var(--secondary-transparency), var(--violet-transparency), var(--blue-green-transparency));
     padding: 3.25vw;
     height: 60%;
-    height:fit-content;
+    height: fit-content;
 
     display: flex;
     flex-direction: column;
@@ -188,29 +196,29 @@ div.hero_content {
     }
 }
 
-section#hero a{
-    font-size: 150%;    
-    text-decoration:underline;
-    
+section#hero a {
+    font-size: 150%;
+    text-decoration: underline;
+
     font-family: 'Pacifico', cursive;
 
 }
 
 /*----Trabajos----*/
-section#trabajos{
+section#trabajos {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-section#trabajos div#trabajos--images{
+section#trabajos div#trabajos--images {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: space-between;
 }
 
-section#trabajos div#trabajos--images figure{
+section#trabajos div#trabajos--images figure {
     width: 49rem;
     height: 49rem;
     padding: 1rem;
@@ -224,19 +232,20 @@ section#trabajos div#trabajos--images figure{
     align-items: center;
 }
 
-section#trabajos div#trabajos--images figure img{
+section#trabajos div#trabajos--images figure img {
     border-radius: 30px;
     width: 45rem;
     height: 45rem;
 }
+
 /*Texto de las imágenes*/
-section#trabajos figcaption{
+section#trabajos figcaption {
     font-size: 280%;
     margin-top: 0.5rem;
 }
 
 /*----Sobre mí----*/
-section#sobreMi{
+section#sobreMi {
     margin-top: 1rem;
     margin-right: 1rem;
     padding: 1rem;
@@ -246,22 +255,22 @@ section#sobreMi{
     border-radius: 2rem;
 }
 
-section#sobreMi h1{
+section#sobreMi h1 {
     background-color: transparent;
 }
 
-section#sobreMi > div{
+section#sobreMi>div {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-section#sobreMi .sobreMi--text{
+section#sobreMi .sobreMi--text {
     font-size: 150%;
 
 }
 
-section#sobreMi > div img{
+section#sobreMi>div img {
     border-radius: 25px;
     height: 30rem;
     margin-left: 2em;
@@ -272,12 +281,12 @@ section#sobreMi > div img{
 
 /*----Servicios----*/
 
-section#servicios{
+section#servicios {
     display: flex;
     flex-direction: column;
 }
 
-.cards{  
+.cards {
     display: flex;
     justify-content: space-evenly;
     align-content: space-between;
@@ -303,17 +312,17 @@ section#servicios{
 
 }
 
-.card--services .card--title{
+.card--services .card--title {
     color: black;
 
-    font-family: 'Pacifico', cursive; 
+    font-family: 'Pacifico', cursive;
     font-size: 200%;
     text-decoration: underline;
 
 }
 
 /*Animación del texto*/
-.card--services .card--para{
+.card--services .card--para {
     margin: 1rem;
     color: white;
     font-size: 110%;
@@ -323,7 +332,8 @@ section#servicios{
 
     transition: all 0.6s ease-in-out;
 }
- .card--services::before {
+
+.card--services::before {
     content: "";
     /*lo posiciono respecto a su padre body */
     position: absolute;
@@ -331,7 +341,7 @@ section#servicios{
     width: 44.75rem;
     /*ancho=ancho de su padre*/
     height: 22rem;
-    background-image: linear-gradient(135deg,var(--secondary-color),var(--pink));
+    background-image: linear-gradient(135deg, var(--secondary-color), var(--pink));
 
     transform: scaleX(0);
 
@@ -342,8 +352,9 @@ section#servicios{
 .card--services:hover::before {
     transform: scaleX(1);
 }
+
 /*Animación del texto*/
-.card--services:hover .card--para{
+.card--services:hover .card--para {
     transform: scaleX(1);
 }
 
@@ -353,13 +364,13 @@ section#servicios{
 
 
 /*----Habilidades----*/
-section#habilidades .habilidades{
-display: flex;
-flex-wrap: wrap;
-justify-content:space-evenly;
+section#habilidades .habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-.skills{
+.skills {
     width: 40%;
     margin-top: 1rem;
     padding-bottom: 2rem;
@@ -403,12 +414,12 @@ justify-content:space-evenly;
 
 /*----Testimonios----*/
 
-section#testimonios {    
+section#testimonios {
     width: 100%;
 }
 
 /*Disposición de los elementos*/
-section#testimonios .testimonials{
+section#testimonios .testimonials {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -422,8 +433,6 @@ section#testimonios .testimonials{
     width: fit-content;
     height: fit-content;
     margin: 2rem;
-
-    
 }
 
 .card--img {
@@ -447,10 +456,10 @@ section#testimonios .testimonials{
     background-color: var(--violet-transparency);
 }
 
-.card-testimony:nth-child(odd) .card--info{
-    
+.card-testimony:nth-child(odd) .card--info {
+
     background-color: var(--pink-transparency);
-    
+
 }
 
 .card--img:hover {
@@ -462,3 +471,186 @@ section#testimonios .testimonials{
 }
 
 
+
+/*----Contacto----*/
+
+section#contacto form {
+    background-color: var(--primary-transparency);
+    margin-right: 1rem;
+
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+}
+
+section#contacto form fieldset {
+    display: flex;
+    justify-content: center;
+    font-size: 200%;
+}
+
+
+section#contacto form fieldset div {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: flex-start;
+}
+
+section#contacto form fieldset div#labels {
+    align-items: flex-end;
+
+    margin-right: 1rem;
+    width: fit-content;
+}
+
+section#contacto form fieldset label {
+    margin-bottom: 1rem;
+}
+
+
+section#contacto form fieldset input {
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 1rem;
+
+    background-color: var(--violet-transparency);
+    color: white;
+}
+
+section#contacto form fieldset textarea {
+    width: 100%;
+    height: 15rem;
+
+    background-color: var(--violet-transparency);
+    color: white;
+}
+
+section#contacto form fieldset #submit {
+    align-self: center;
+
+    width: 50%;
+    margin-top: 1rem;
+    border-radius: 1rem;
+
+    border: transparent;
+    background-color: var(--secondary-color);
+    color: white;
+    font-family: 'Changa', sans-serif;
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+
+    /*----HEADER Y NAV------*/
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav {
+        width: fit-content;
+    }
+
+    nav ul {
+
+        width: fit-content;
+
+        display: flex;
+        flex-direction: column;
+
+        position: relative;
+        top: 7px;
+    }
+
+    /*----TRABAJOS------*/
+
+    section#trabajos div#trabajos--images figure {
+        width: 25rem;
+        height: 25rem;
+        padding: 1rem;
+    }
+
+    section#trabajos div#trabajos--images figure img {
+        border-radius: 1rem;
+        width: 20rem;
+        height: 20rem;
+    }
+
+
+
+    /*----SERVICIOS------*/
+
+
+    .card--services .card--para {
+        /*Elimino la escala 0 para que se vea*/
+        transform: scaleX(1); /*AASDASDAS*/
+
+        margin: 1rem;
+        padding: 1rem;
+
+        color: white;
+        font-size: 110%;
+
+        background-image: linear-gradient(135deg, var(--secondary-transparency), var(--pink-transparency));
+        border-radius: 1rem;
+    }
+
+
+    /*----TESTIMONIOS----*/
+    
+.card--img {
+    transform: scale(0.9);/*ASD ADASD */
+}
+
+
+.card--info {
+    transform: scaleX(1);} /*AASDASDAS*/
+}
+
+
+@media screen and (max-width: 570px) {
+    /*----SERVICIOS----*/
+
+    .card--services {
+        width: 30rem;
+
+        background-color: var(--secondary-color);
+        color: black;
+    }
+
+    /*----HABILIDADES----*/
+    
+    .skills {
+        width: 35%;
+        margin-right: 2rem;
+        padding-left: 0.5rem;
+    }
+
+    /*----TESTIMONIOS----*/
+    
+
+/*Elemento individual, texto: posición y margen*/
+.card-testimony {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    margin: 5rem;
+}
+
+.card--img {
+    width: 27rem;
+}
+
+.card--info {
+    position: absolute;
+    bottom: -5rem;
+    left: -2rem;
+    width: 22rem;
+}
+
+
+}
