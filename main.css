@@ -1,0 +1,464 @@
+/*------------VALORES INICIALES------------*/
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.8;
+
+}
+:root {
+    font-size:65.5%; /*10px*/
+    font-family: 'Changa', sans-serif;
+    color: white;
+
+    --primary-color:#232426;
+    --secondary-color:#1BA1BF;
+    --blue-green:#14A697;
+    --violet:#595378;
+    --pink:#aa3659;
+
+    --primary-transparency:rgb(35, 36, 38,0.9);
+    --secondary-transparency:rgba(27, 161, 191, 0.9);
+    --violet-transparency:rgb(89, 83, 120,0.9);
+    --blue-green-transparency: rgb(20, 166, 151,0.9);
+    --pink-transparency:rgb(170, 54, 89,0.9);
+    /*var(--secondary-color),var(--violet),var(--blue-green)
+    #0FBF8D
+    #0BD979
+    */
+
+
+}
+
+h1,ul{
+    font-family: 'Pacifico', cursive;
+}
+
+h1{    
+    width: fit-content;
+    padding: 0.5rem;
+    border-radius: 5px;
+
+    font-size: 400%; /*40px*/
+
+    background-color: var(--secondary-transparency);
+}
+
+section#hero  h1{
+    background-color: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+  }
+
+/*------------ESTRUCTURA DEL MAIN Y ASIDE------------*/
+body{
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+    
+    display: flex;
+}
+aside{
+    /*Porcentaje de pantalla que ocupará*/
+    flex-basis: 3%;
+}
+
+main{
+    /*Porcentaje de pantalla que ocupará*/
+    width: 100%;
+    flex-basis: 97%;
+    
+    /*Imagen de fondo*/
+    background-image:url("images/background.jpg") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    /*Disposición de contenidos*/
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    padding: 0%;
+    margin: 0;
+    width: 100%;
+    
+    display: flex;
+}
+
+
+/*------------BARRA DE NAVEGACIÓN------------*/
+nav{
+    margin-top: 0;
+    width: 100%; 
+    background-color: var(--primary-color);
+    }
+nav ul{
+    list-style:none;
+    font-size: 300%; /*30px*/
+
+    /*Posición de los elementos*/
+    display: flex;
+    justify-content:space-evenly
+}
+nav ul li{
+    width: fit-content;
+    height: fit-content;
+    margin: 0.5rem;
+}
+nav ul li a{    
+    color: white;
+}
+
+
+
+/*------------ASIDE------------*/
+aside{   
+    height: 100vh;
+    background-image: linear-gradient(var(--blue-green), var(--violet));
+    
+
+    /*Para que se quede fijo en la página*/
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;  
+    
+    /*Disposición de los elementos*/
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+    font-size: 300%;
+}
+
+
+
+
+
+/*------------SECCIONES------------*/
+section{
+    margin-left: 1rem;
+}
+
+
+/*----Inicio (hero)----*/
+section#hero {
+    margin-top: 5rem;
+    margin-left: 25%;
+    margin-left: 2rem;
+
+    height: 70vh;
+    height:fit-content;
+    width: 40vh;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+div.hero_content {
+    background-image: linear-gradient(135deg,var(--secondary-transparency),var(--violet-transparency),var(--blue-green-transparency));
+    padding: 3.25vw;
+    height: 60%;
+    height:fit-content;
+
+    display: flex;
+    flex-direction: column;
+
+    animation: hero 2s ease-in-out;
+}
+
+@keyframes hero {
+    0% {
+        transform: translateX(200rem) scale(0.5) rotate(360deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+section#hero a{
+    font-size: 150%;    
+    text-decoration:underline;
+    
+    font-family: 'Pacifico', cursive;
+
+}
+
+/*----Trabajos----*/
+section#trabajos{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+section#trabajos div#trabajos--images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-between;
+}
+
+section#trabajos div#trabajos--images figure{
+    width: 49rem;
+    height: 49rem;
+    padding: 1rem;
+
+    background-color: var(--primary-transparency);
+    border-radius: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section#trabajos div#trabajos--images figure img{
+    border-radius: 30px;
+    width: 45rem;
+    height: 45rem;
+}
+/*Texto de las imágenes*/
+section#trabajos figcaption{
+    font-size: 280%;
+    margin-top: 0.5rem;
+}
+
+/*----Sobre mí----*/
+section#sobreMi{
+    margin-top: 1rem;
+    margin-right: 1rem;
+    padding: 1rem;
+    padding-top: 0;
+
+    background-color: var(--violet-transparency);
+    border-radius: 2rem;
+}
+
+section#sobreMi h1{
+    background-color: transparent;
+}
+
+section#sobreMi > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section#sobreMi .sobreMi--text{
+    font-size: 150%;
+
+}
+
+section#sobreMi > div img{
+    border-radius: 25px;
+    height: 30rem;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+
+
+/*----Servicios----*/
+
+section#servicios{
+    display: flex;
+    flex-direction: column;
+}
+
+.cards{  
+    display: flex;
+    justify-content: space-evenly;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card--services {
+    position: relative;
+
+    width: 45rem;
+    height: 22rem;
+    background-color: var(--secondary-color);
+    background-image: url("https://concepto.de/wp-content/uploads/2015/03/paisaje-800x409.jpg");
+    color: black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: 0.2rem solid var(--secondary-color);
+    margin: 2rem;
+
+}
+
+.card--services .card--title{
+    color: black;
+
+    font-family: 'Pacifico', cursive; 
+    font-size: 200%;
+    text-decoration: underline;
+
+}
+
+/*Animación del texto*/
+.card--services .card--para{
+    margin: 1rem;
+    color: white;
+    font-size: 110%;
+
+    z-index: 1;
+    transform: scaleX(0);
+
+    transition: all 0.6s ease-in-out;
+}
+ .card--services::before {
+    content: "";
+    /*lo posiciono respecto a su padre body */
+    position: absolute;
+    /*lo dimensiono, */
+    width: 44.75rem;
+    /*ancho=ancho de su padre*/
+    height: 22rem;
+    background-image: linear-gradient(135deg,var(--secondary-color),var(--pink));
+
+    transform: scaleX(0);
+
+    transition: all 0.6s ease-in-out;
+}
+
+.card--services:hover::after,
+.card--services:hover::before {
+    transform: scaleX(1);
+}
+/*Animación del texto*/
+.card--services:hover .card--para{
+    transform: scaleX(1);
+}
+
+.card--title {
+    z-index: 1;
+}
+
+
+/*----Habilidades----*/
+section#habilidades .habilidades{
+display: flex;
+flex-wrap: wrap;
+justify-content:space-evenly;
+}
+
+.skills{
+    width: 40%;
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+
+    background-color: var(--primary-transparency);
+    border-radius: 2rem;
+}
+
+
+@keyframes progressBarAnimation {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 80%;
+    }
+}
+
+.skills__design--progress {
+    width: 90%;
+    height: 20px;
+    background-color: #ccc;
+    position: relative;
+    border-radius: 10px;
+}
+
+.skills__design--progress__1 {
+    width: 80%;
+    height: 100%;
+    background-color: var(--pink);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    animation: progressBarAnimation 10s;
+}
+
+
+
+/*----Testimonios----*/
+
+section#testimonios {    
+    width: 100%;
+}
+
+/*Disposición de los elementos*/
+section#testimonios .testimonials{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-between;
+}
+
+/*Elemento individual, texto: posición y margen*/
+.card-testimony {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    margin: 2rem;
+
+    
+}
+
+.card--img {
+    width: 500px;
+    transform: scale(1);
+    transition: transform .2s ease-in-out;
+}
+
+.card--info {
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+    width: 400px;
+    padding: 7px;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .2s ease-in-out;
+
+    color: white;
+    background-color: var(--violet-transparency);
+}
+
+.card-testimony:nth-child(odd) .card--info{
+    
+    background-color: var(--pink-transparency);
+    
+}
+
+.card--img:hover {
+    transform: scale(0.9);
+}
+
+.card--img:hover~.card--info {
+    transform: scaleX(1);
+}
+
+
