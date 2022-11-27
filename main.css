@@ -299,7 +299,6 @@ section#servicios {
     width: 45rem;
     height: 22rem;
     background-color: var(--secondary-color);
-    background-image: url("https://concepto.de/wp-content/uploads/2015/03/paisaje-800x409.jpg");
     color: black;
 
     display: flex;
@@ -310,16 +309,41 @@ section#servicios {
     border: 0.2rem solid var(--secondary-color);
     margin: 2rem;
 
+    
+    background-size: cover;
 }
 
 .card--services .card--title {
-    color: black;
+    color: white;
+    background-color: var(--primary-color);
 
     font-family: 'Pacifico', cursive;
     font-size: 200%;
     text-decoration: underline;
 
 }
+
+
+    /*imágenes*/
+    .card--services#front{ 
+        background-image: url("images/frontend.png"); 
+    }
+    
+    .card--services#back{ 
+        background-image: url("images/backend.png"); 
+    }
+    
+    .card--services#BBDD{ 
+        background-image: url("images/Basededatos.png"); 
+    }
+    
+    .card--services#disenio{ 
+        background-image: url("images/disenioweb.jpg"); 
+    }
+    
+    .card--services#android{ 
+        background-image: url("images/android.jpg"); 
+    }
 
 /*Animación del texto*/
 .card--services .card--para {
@@ -381,16 +405,6 @@ section#habilidades .habilidades {
 }
 
 
-@keyframes progressBarAnimation {
-    from {
-        width: 0%;
-    }
-
-    to {
-        width: 80%;
-    }
-}
-
 .skills__design--progress {
     width: 90%;
     height: 20px;
@@ -408,6 +422,50 @@ section#habilidades .habilidades {
     left: 0;
     border-radius: 10px;
     animation: progressBarAnimation 10s;
+}
+
+/*Animaciones*/
+@keyframes disenio {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 50%;
+    }
+}
+@keyframes frontend {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 90%;
+    }
+}
+@keyframes backend {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 70%;
+    }
+}
+
+#b_disenio, #b_basesdatos {
+    width:50%;    
+    animation: disenio 7s;    
+}
+
+#b_frontend {
+    width:90%;    
+    animation: frontend 7s;    
+}
+
+#b_backend {
+    width:70%;    
+    animation: backend 7s;    
 }
 
 
@@ -587,7 +645,8 @@ section#contacto form fieldset #submit {
 
     .card--services .card--para {
         /*Elimino la escala 0 para que se vea*/
-        transform: scaleX(1); /*AASDASDAS*/
+        transform: scaleX(1);
+        /*AASDASDAS*/
 
         margin: 1rem;
         padding: 1rem;
@@ -599,22 +658,39 @@ section#contacto form fieldset #submit {
         border-radius: 1rem;
     }
 
+    .card--services::before {
+        background-image:none;   /*ASD ADASD */ 
+        transform: scaleX(1);/*ASD ADASD */
+    }
+
 
     /*----TESTIMONIOS----*/
-    
-.card--img {
-    transform: scale(0.9);/*ASD ADASD */
-}
+
+    .card--img {
+        transform: scale(0.9); /*ASD ADASD */
+    }
 
 
-.card--info {
-    transform: scaleX(1);} /*AASDASDAS*/
+    .card--info {
+        transform: scaleX(1);
+    }
+
+    /*AASDASDAS*/
 }
 
 
 @media screen and (max-width: 570px) {
-    /*----SERVICIOS----*/
+    section {
+        margin-left: 0rem;
+    }
 
+    section >div>div{
+        margin-left:0 ;
+        padding-left: 0;
+    }
+
+
+    /*----SERVICIOS----*/
     .card--services {
         width: 30rem;
 
@@ -623,7 +699,7 @@ section#contacto form fieldset #submit {
     }
 
     /*----HABILIDADES----*/
-    
+
     .skills {
         width: 35%;
         margin-right: 2rem;
@@ -631,26 +707,24 @@ section#contacto form fieldset #submit {
     }
 
     /*----TESTIMONIOS----*/
-    
 
-/*Elemento individual, texto: posición y margen*/
-.card-testimony {
-    position: relative;
-    width: fit-content;
-    height: fit-content;
-    margin: 5rem;
-}
+    .card-testimony {
+        position: relative;
+        width: fit-content;
+        height: fit-content;
+        margin: 5rem;
+    }
 
-.card--img {
-    width: 27rem;
-}
+    .card--img {
+        width: 27rem;
+    }
 
-.card--info {
-    position: absolute;
-    bottom: -5rem;
-    left: -2rem;
-    width: 22rem;
-}
+    .card--info {
+        position: absolute;
+        bottom: -5rem;
+        left: -2rem;
+        width: 22rem;
+    }
 
 
 }
